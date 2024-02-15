@@ -13,7 +13,7 @@ video {
     vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,
 section {
     display: block;
@@ -84,10 +84,10 @@ h6 {
     color: #00ffff;
     text-shadow: 2px 2px 4px #ff00ff;
 
-    vertical-align: 50%; /* Adjust the vertical alignment */
+    vertical-align: 50%; 
 }
 
-/* Style the label to look like the tumbler */
+
 .cEnableButtonLabel {
 
     display: inline-block;
@@ -100,10 +100,10 @@ h6 {
     margin: 0 auto;
     margin-left: 5px;
     margin-right: 5px;
-    /* Center horizontally */
+
 }
 
-/* Style the pseudo-element that represents the tumbler handle */
+
 .cEnableButtonLabel::before {
     content: '';
     box-shadow: 1px 1px 1px rgb(56, 4, 56);
@@ -117,11 +117,11 @@ h6 {
     transform: translateY(-50%);
     transition: all 0.2s ease;
     left: 5px;
-    /* Adjust the left position */
+
 
 }
 
-/* When the checkbox is checked, move the tumbler handle to the right */
+
 .cEnableButton:checked+.cEnableButtonLabel::before {
     left: calc(100% - 25px);
 }

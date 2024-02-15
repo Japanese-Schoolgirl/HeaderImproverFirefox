@@ -1,7 +1,5 @@
-console.log('this is a firefox test branch pls');
-
 const wordsToInsert = [' ИЗ ЖОПЫ', ' ГОВНА', ' ВОТ ПИЗДЕЦ', ' НО ХУЙ ТАМ', ' НУ АХУЕТЬ ТЕПЕРЬ', ', НО КОГО ЕБЁТ?', ' ДА И ХУЙ С НИМ', ' НУ И ЗАЕБИСЬ'];
-let headerToChange = document.querySelectorAll('h1, h2, h3, h1 > span, .icon icon--tick_redaction');
+let headerToChange = document.querySelectorAll('h1, h2, h3, h1 > span');
 
 function getRandomNumber() {
   return Math.floor(Math.random() * 8);
@@ -19,7 +17,7 @@ let dialPosition = 10;
 let randomON = true;
 let enableM = true;
 
-// Retrieve the slider value from storage when the content script loads
+// Когда скрипт грузится (когда таба грузится) подгружаем из памяти значения юая, назначаем их переменным и улучшаем заголовки
 browser.storage.sync.get(['sliderValue', 'randomModeValue', 'enableBtnValue'], function (data) {
   if (data.sliderValue !== undefined) {
     dialPosition = Number(data.sliderValue);
@@ -48,6 +46,8 @@ browser.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     randomON = message.randomModeValue;
     console.log('randomON = ' + randomON);
     dialPosition = Number(message.sliderValue);
+
+    //эта хуйня раньше улучшала заголовки при каждом нажатии кнопки
     // if (dialPosition !== 10 && enableM == true) {
     //   headerToChange.forEach(element => {
     //     improveHeader(element);
