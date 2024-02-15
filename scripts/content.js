@@ -1,3 +1,5 @@
+console.log('this is a firefox test branch pls');
+
 const wordsToInsert = [' ИЗ ЖОПЫ', ' ГОВНА', ' ВОТ ПИЗДЕЦ', ' НО ХУЙ ТАМ', ' НУ АХУЕТЬ ТЕПЕРЬ', ', НО КОГО ЕБЁТ?', ' ДА И ХУЙ С НИМ', ' НУ И ЗАЕБИСЬ'];
 let headerToChange = document.querySelectorAll('h1, h2, h3, h1 > span, .icon icon--tick_redaction');
 
