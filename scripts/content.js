@@ -19,6 +19,7 @@ let enableM = true;
 
 // Когда скрипт грузится (когда таба грузится) подгружаем из памяти значения юая, назначаем их переменным и улучшаем заголовки
 browser.storage.sync.get(['sliderValue', 'randomModeValue', 'enableBtnValue'], function (data) {
+
   if (data.sliderValue !== undefined) {
     dialPosition = Number(data.sliderValue);
   }
@@ -27,6 +28,7 @@ browser.storage.sync.get(['sliderValue', 'randomModeValue', 'enableBtnValue'], f
   }
   if (data.enableBtnValue !== undefined) {
     enableM = data.enableBtnValue;
+    console.log('onoff is got from memory this: ' + data.enableBtnValue);
   }
   if (dialPosition !== 10 && dialPosition !== undefined && enableM == true) {
     headerToChange.forEach(element => {
