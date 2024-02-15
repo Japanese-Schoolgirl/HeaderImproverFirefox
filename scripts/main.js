@@ -2,11 +2,6 @@ const button = document.getElementById('saveButton');
 const slider = document.getElementById('slider');
 const enableBtn = document.getElementById('enableButton');
 
-console.log('button is ' + button);
-console.log('slider is ' + slider);
-console.log('enableBtn is ' + enableBtn);
-console.log('main.js WORKS');
-
 
 // Загружает штуки из памяти когда страница грузится
 browser.storage.sync.get(['sliderValue', 'randomModeValue', 'enableBtnValue'], function (data) {
