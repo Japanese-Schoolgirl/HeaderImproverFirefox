@@ -1,1 +1,1 @@
-HeaderImprover for Google Chrome
+HeaderImprover for Mozilla Firefox
